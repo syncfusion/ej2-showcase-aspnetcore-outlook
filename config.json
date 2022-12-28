@@ -1,6 +1,0 @@
-{
-  "deploy": [ "deploy/**" ],
-  "base": "deploy",
-  "isShowCase": true,
-  "appName": "webmail"
-}
