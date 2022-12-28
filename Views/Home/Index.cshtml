@@ -1,0 +1,52 @@
+﻿@using Syncfusion.EJ2;
+@{
+    ViewData["Title"] = "Index";
+}
+<div class='outlook-container'>
+    <div class='header navbar'>
+        <div class='container-fluid' style="font-size: 0; white-space: nowrap; line-height: normal">
+            <div style="display: table-cell">
+                <div class='home-btn'>
+                    <span class='ej-icon-Bento' style='font-size: 18px;'></span>
+                </div>
+                <div style='margin-left: 15px;display: inline-block'>
+                    <span class='home-btn-text'>Webmail</span>
+                </div>
+            </div>
+            <div style="display: table-cell; width: 100%; text-align: center">
+            </div>
+            <div id="notification-div" class="header-right-pane">
+                <div style="pointer-events: none;">
+                    <ejs-button id="btnNotification"></ejs-button>
+                </div>
+            </div>
+            <div id="settings-div" class="header-right-pane">
+                <div style="pointer-events: none;">
+                    <ejs-button id="btnSettings"></ejs-button>
+                </div>
+            </div>
+            <div id="about-div" class="header-right-pane">
+                <div style="pointer-events: none;">
+                    <ejs-button id="btnAbout"></ejs-button>
+                </div>
+            </div>
+            <div id="profile-div" class="header-right-pane">
+                <div style="right: 0px;position: absolute;top: 3px;pointer-events: none;margin-right: 5px;">
+                    <div class='logo logo-style1 profile-pic'></div>
+                </div>
+                <div style="margin-right: 44px; pointer-events: none;">
+                    <ejs-button id="btnLoginName" cssClass="btn-profile"></ejs-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content-area" style="height: 100%">
+    </div>
+</div>
+
+<ejs-scripts></ejs-scripts>
+<style>
+    #btnNotification, #btnSettings, #btnAbout {
+        min-width: 52px;
+    }
+</style>
