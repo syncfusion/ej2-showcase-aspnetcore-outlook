@@ -3,8 +3,8 @@
     ViewData["Title"] = "Index";
 }
 <div class='outlook-container'>
-    <div class='header navbar'>
-        <div class='container-fluid' style="font-size: 0; white-space: nowrap; line-height: normal">
+    <ejs-appbar colorMode="Dark" id="appbar" style="font-size: 0; white-space: nowrap; line-height: normal">
+        <e-content-template>
             <div style="display: table-cell">
                 <div class='home-btn'>
                     <span class='ej-icon-Bento' style='font-size: 18px;'></span>
@@ -31,15 +31,15 @@
                 </div>
             </div>
             <div id="profile-div" class="header-right-pane">
-                <div style="right: 0px;position: absolute;top: 3px;pointer-events: none;margin-right: 5px;">
-                    <div class='logo logo-style1 profile-pic'></div>
-                </div>
-                <div style="margin-right: 44px; pointer-events: none;">
+                <div style="pointer-events: none;">
                     <ejs-button id="btnLoginName" cssClass="btn-profile"></ejs-button>
                 </div>
+                <div style="margin-right: 5px; pointer-events: none;">
+                    <span class="e-avatar e-avatar-large e-avatar-circle" style="background-image: url('/content/images/1.png');height: 40px; width: 40px;"></span>
+                </div>
             </div>
-        </div>
-    </div>
+        </e-content-template>
+    </ejs-appbar>
     <div id="content-area" style="height: 100%">
     </div>
 </div>
