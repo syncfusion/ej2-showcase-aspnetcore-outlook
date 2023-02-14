@@ -1675,7 +1675,7 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-/* Overriding the default positon to achive exact alignment */
+/* Overriding the default positon to achieve exact alignment */
 #reading-pane-div {
     position: relative;
 }
