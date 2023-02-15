@@ -5,7 +5,6 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Http;
-//using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.AspNetCore.Hosting;
 using EJ2CoreSampleBrowser.Helpers.BrowserClasses;
 

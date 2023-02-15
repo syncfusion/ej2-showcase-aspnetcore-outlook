@@ -8,6 +8,11 @@ var selectedToolbarItem = '';
 window.newmail = function () {
     renderToolbar();
     createMailForm();
+    var mentionObj = new ej.dropdowns.Mention({
+        dataSource: getContacts(),
+        fields: { text: 'text' }
+    });
+    mentionObj.appendTo('#mailContentMessage');
 };
 function createMailForm() {
     var toButton = new ej.buttons.Button();
@@ -70,7 +75,7 @@ function createMailForm() {
         document.getElementsByClassName('mail-subject e-input-group')[0].classList.remove('e-input-focus');
     };
     toolbarNewMail = document.getElementById('new_email_toolbar').ej2_instances[0];
-    toolbarNewMail.overflowMode = 'Popup';
+    toolbarNewMail.overflowMode = 'Scrollable';
 }
 function renderToolbar() {
     toolbarHeader1 = document.getElementById('toolbar_newmail').ej2_instances[0];

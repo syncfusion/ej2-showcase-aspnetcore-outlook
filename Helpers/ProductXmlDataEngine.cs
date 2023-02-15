@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Html;
 using System.IO;
 using Manoli.Utils.CSharpFormat;
 using System.Net;
-//using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;

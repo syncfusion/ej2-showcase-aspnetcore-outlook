@@ -29,23 +29,6 @@ html, body {
 
 /* Top Header Customization */
 
-.header {
-    position: relative;
-    display: block;
-    z-index: 11;
-    background: #222;
-}
-
-    .header.navbar {
-        border-width: 0;
-        border-radius: 0;
-        margin-bottom: 0;
-    }
-
-    .header.navbar.head-pane-hide .header-right-pane {
-        display: none;
-    }
-
     .header-right-pane {
         display: table-cell; 
         text-align: right; 
@@ -105,22 +88,23 @@ html, body {
     left: -280px;
 }
 
-.sidebar {
+#sidebar {
     position: absolute;
-    top: 50px;
     bottom: 0;
     z-index: 10006;
     width: 280px;
     left: 0px;
     border-right: 1px solid #e5e3e3;
+    overflow-y: hidden;
 }
 
 .content-wrapper {
     margin: 0;
-    left: 280px;
+    left: 0px;
     height: 100%;
-    position:absolute;
-    width:calc(100% - 280px);
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
 }
     .content-wrapper > .content {
         z-index: 7;
@@ -149,12 +133,16 @@ html, body {
 }
 
 .reading-pane {
-    width:calc(100% - 374px);
+    width: 100%;
     background-color:#fff;
     height:calc(100% - 40px);
-    left:374px; 
+    left: 0px;
     position:absolute;
     overflow: auto;
+}
+
+#list-pane-div {
+    width: 100%;
 }
 
 .reading-pane.new-mail {
@@ -981,11 +969,6 @@ html, body {
     height: 100%;
 }
 
-.e-dlg-overlay {
-    background-color: white;
-    opacity: 0.65;
-}
-
 .dlg-content-style {
     padding: 15px;
     background-color: #f4f4f4;
@@ -1163,22 +1146,6 @@ html, body {
 .e-ddl.e-popup.e-multi-select-list-wrapper.e-control.ac-new-mail.e-popup-open,
 #txtSearch_popup, #rp-replyAllList_popup, #rp-moreList_popup, #rp-moreList2_popup, #moreList2_popup  {
     z-index: 100001;
-}
-
-.overlay-element {
-    width: 100%;
-    height: calc(100% + 50px);
-    position: absolute;
-    left: 0px; right: 0px;
-    top: 0px; bottom: 0px;
-    background-color: rgb(51,51,51);
-    opacity: 0.4;
-    z-index: 10005;
-    display: none;
-}
-
-.overlay-element.show1 {
-    display: block;
 }
 
 .popup-subjectstyle {
@@ -1413,7 +1380,7 @@ html, body {
 
 @media screen and (min-width:1200px) {
     .row.content.show-header-content .content-wrapper {
-        width:calc(100% - 610px);
+        width: 100%;
     }
 }
 
@@ -1456,8 +1423,10 @@ html, body {
     #toolbar_mobile {
         display: block;
     }
-    .header.navbar {
-        display: none;
+    /* To Animate Appbar  */
+    #appbar {
+        animation: hideAppBar 0.5s ease-out;
+        height: 0px;
     }
     .outlook-container {
         height: 100%;
@@ -1502,6 +1471,14 @@ html, body {
         background-color: #fff;
     }
     
+}
+@keyframes hideAppBar {
+    from {
+        height: 48px;
+    }
+    to {
+        height: 0px;
+    }
 }
 
 @media screen and (max-width:605px) {
@@ -1684,4 +1661,45 @@ html, body {
 }
 #rp-to {
     font-size: 12px;
+}
+/* Overriding appbar styles to achieve exact appbar alignment*/
+#appbar {
+    padding: 0%;
+}
+#profile-div {
+    display: flex;
+}
+.header-right-pane {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Overriding the default positon to achieve exact alignment */
+#reading-pane-div {
+    position: relative;
+}
+#list-pane-div {
+    position: relative;
+}
+.msg-top-margin {
+    top: 40px;
+}
+/* Overriding splitter styles to remove resize handler Icon  */
+.e-splitter .e-split-bar.e-split-bar-horizontal .e-resize-handler::before {
+    display: none;
+}
+/* Overriding splitter styles to make splitBar transparent  */
+#splitter.e-splitter .e-split-bar.e-split-bar-horizontal,
+#splitter.e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-hover,
+.e-splitter .e-split-bar.e-split-bar-horizontal.e-split-bar-active {
+    background-color: transparent;
+}
+/* Styles for the of Right-SideBar Content */
+#headerSidebar {
+    background-color: #f4f4f4;
+}
+#headerSidebar .text-content {
+    font-size: 28px;
+    font-family: "Segoe UI Light","Segoe UI",Segoe,Tahoma,Helvetica,Arial,Sans-Serif;
 }

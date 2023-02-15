@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-//using Microsoft.AspNetCore.Http.Internal;
 
 namespace EJ2CoreSampleBrowser.Helpers
 {
