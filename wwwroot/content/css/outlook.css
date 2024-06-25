@@ -1389,7 +1389,7 @@ html, body {
         width:474px;
     }
     .reading-pane {
-        width:calc(100% - 474px);
+        width: 100%;
         left:474px; 
     }
 }
@@ -1678,6 +1678,7 @@ html, body {
 /* Overriding the default positon to achieve exact alignment */
 #reading-pane-div {
     position: relative;
+    left: auto;
 }
 #list-pane-div {
     position: relative;
