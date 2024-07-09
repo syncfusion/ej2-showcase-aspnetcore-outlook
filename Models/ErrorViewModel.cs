@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Outlook_Core.Models
+﻿namespace EJ2CoreSampleBrowser.Models
 {
     public class ErrorViewModel
     {
-        public string RequestId { get; set; }
-
+        public string? RequestId { get; set; }
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }

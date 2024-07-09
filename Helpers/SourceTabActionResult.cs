@@ -22,19 +22,19 @@ namespace EJ2CoreSampleBrowser.Helpers
             get;
             set;
         }
-        public IWebHostEnvironment ApplicationPath
+        public Microsoft.AspNetCore.Hosting.IHostingEnvironment ApplicationPath
         {
             get;
             set;
         }
         private bool SeperateWindow { get; set; }
-        public SourceTabActionResult(string fileName, string seperateWindow, IWebHostEnvironment path)
+        public SourceTabActionResult(string fileName, string seperateWindow, Microsoft.AspNetCore.Hosting.IHostingEnvironment path)
         {
             this.FileName = fileName;
             this.SeperateWindow = seperateWindow == "true";
             this.ApplicationPath = path;
         }
-        public string getContent(IWebHostEnvironment path)
+        public string getContent(Microsoft.AspNetCore.Hosting.IHostingEnvironment path)
         {
             ProductXmlDataEngine xmlEngine = new ProductXmlDataEngine();
             TabType tabType = xmlEngine.GetTabType(this.FileName);
