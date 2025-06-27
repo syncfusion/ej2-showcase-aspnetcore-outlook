@@ -16,13 +16,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Setup .NET9
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
     - name: Setup .NET8
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Build NET8
+    - name: Setup .NET9
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+    - name: Build Showcase
       run: dotnet build Outlook_Core_NET8.csproj
