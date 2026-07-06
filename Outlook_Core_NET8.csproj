@@ -7,6 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="33.1.44" />
+		<PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="34.1.29" />
 	</ItemGroup>
 </Project>
